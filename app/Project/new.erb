@@ -1,0 +1,22 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		New Project
+	</h1>
+</div>
+
+<form title="New Project" 
+	  class="panel"
+	  id="project_new_form" 
+	  method="POST" 
+	  action="<%=url_for(:action => :create)%>" selected="true">
+	<fieldset>
+		<input type="hidden" name="id" value="<%=@project.object%>"/>
+		
+		  <div class="row">
+			  <label>Title: </label>
+			  <input type="text" name="project[title]"/>
+		  </div>
+		
+	</fieldset>
+	<input type="submit" value="Create"/>
+</form>

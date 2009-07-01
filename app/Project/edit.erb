@@ -1,0 +1,27 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		Edit <%=@project.title%>
+	</h1>
+</div>
+
+<form title="Edit Project" 
+	  class="panel" 
+	  id="project_edit_form" 
+	  method="POST" 
+	  action="<%=url_for(:action => :update)%>" selected="true">
+	<fieldset>
+		<input type="hidden" name="id" value="<%=@project.object%>"/>
+		
+		  <div class="row">
+			  <label>Title: </label>
+			  <input type="text" name="project[title]" value="<%=@project.title%>"/>
+		  </div>
+		
+	</fieldset>
+	<input type="submit" value="Update"/>
+	<p align="center">
+		<a href="<%=url_for(:action => :delete, :id => @project.object)%>">
+			<font color="#990000">Delete</font>
+		</a>
+	</p>
+</form>
