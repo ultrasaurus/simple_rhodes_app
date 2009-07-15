@@ -1,14 +1,14 @@
 <div class="toolbar">
 	<h1 id="pageTitle">
-		Projects
+		Project PageTitle
 	</h1>
 </div>
 
-<ul id="projects" title="Projects" selected="true">
+<ul id="projects" title="Project Title" selected="true">
   	<a class="button right_button" href="Project/new" target="_self">New</a>
 	<%@projects.each do |x|%>
 	
-	<li><%=link_to "#{x.title}", :action => :show, :id => x.object%></li>
+	<li>Project: <%=link_to "#{x.title}", :action => :show, :id => x.object%></li>
 	
 	<%end%>
 </ul>
